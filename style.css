@@ -390,6 +390,11 @@ section {
   text-transform: uppercase;
 }
 
+.feature-card .btn {
+  margin-top: 1rem;
+  font-size: 0.6rem;
+}
+
 /* ── Roadmap ── */
 .roadmap-list {
   margin-top: 2.5rem;
@@ -514,9 +519,6 @@ footer {
     font-size: 0.72rem;
   }
   .features-grid {
-    grid-template-columns: 1fr;
-  }
-  .tool-options {
     grid-template-columns: 1fr;
   }
   .hero-logo {
