@@ -71,7 +71,7 @@
         </div>
         <div class="hero-stack">
           <span class="badge">C++23</span>
-          <span class="badge">Metal</span>
+          <span class="badge">Sokol</span>
           <span class="badge">GLFW</span>
           <span class="badge">Dear ImGui</span>
           <span class="badge">Apple Silicon</span>
@@ -85,10 +85,10 @@
           <p class="section-body">
             Corundum Engine is a custom 2D game engine written in C++23,
             designed specifically for building classic role-playing games. It
-            uses Metal for hardware-accelerated rendering and GLFW for
-            windowing, with an initial focus on macOS and Apple Silicon. Every
-            part of the engine — from the rendering pipeline to the RPG systems
-            — is a work in progress.
+            uses Sokol for cross-platform hardware-accelerated rendering (Metal
+            on macOS, D3D11 on Windows, GLCore on Linux) and GLFW for windowing.
+            Every part of the engine — from the rendering pipeline to the RPG
+            systems — is a work in progress.
           </p>
           <div class="crystal-divider">
             <svg
@@ -158,8 +158,9 @@
               <div class="feature-icon" aria-hidden="true">&#9881;&#65039;</div>
               <h3 class="feature-title">2D Rendering</h3>
               <p class="feature-desc">
-                Hardware-accelerated 2D sprite and tilemap rendering via Apple's
-                Metal API, optimized for native Apple Silicon performance.
+                Hardware-accelerated 2D sprite and tilemap rendering via Sokol,
+                with Metal, D3D11, and GLCore backends for native performance
+                across platforms.
               </p>
               <span class="feature-badge">In Development</span>
             </div>
@@ -190,8 +191,9 @@
               <div class="feature-icon" aria-hidden="true">&#129521;</div>
               <h3 class="feature-title">Tilemap Builder</h3>
               <p class="feature-desc">
-                Visual tilemap editor for constructing game worlds tile by tile,
-                integrated tightly with the engine's rendering pipeline.
+                Visual tilemap editor for constructing 2D isometric game worlds
+                tile by tile, integrated tightly with the engine's rendering
+                pipeline.
               </p>
               <span class="feature-badge">In Development</span>
             </div>
@@ -202,6 +204,37 @@
                 Rules systems, quest design, dialogue, combat, and character
                 progression mechanics purpose-built for classic role-playing
                 games.
+              </p>
+              <span class="feature-badge">In Development</span>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">&#128220;</div>
+              <h3 class="feature-title">Data-Driven Design</h3>
+              <p class="feature-desc">
+                Every aspect of the game — dialogue, tilemaps, sprite sheets,
+                and configuration — is driven by JSON data. No hard-coded
+                content, fully moddable.
+              </p>
+              <span class="feature-badge">In Development</span>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">&#128172;</div>
+              <h3 class="feature-title">Dialogue Engine</h3>
+              <p class="feature-desc">
+                A directed-graph dialogue system supporting branching
+                conversations, quest triggers, and deep RPG storytelling
+                mechanics.
+              </p>
+              <span class="feature-badge">In Development</span>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon" aria-hidden="true">
+                &#128396;&#65039;
+              </div>
+              <h3 class="feature-title">Font Rendering</h3>
+              <p class="feature-desc">
+                TrueType font rendering via FreeType, with support for UI text,
+                in-game dialogue panels, and stylistic RPG typography.
               </p>
               <span class="feature-badge">In Development</span>
             </div>
@@ -225,7 +258,8 @@
               <div class="roadmap-label">In Progress</div>
               <h3 class="roadmap-title">Core Engine &amp; Rendering</h3>
               <p class="roadmap-desc">
-                Metal-backed 2D renderer on macOS and Apple Silicon via GLFW.
+                Sokol-based 2D renderer with cross-platform backends (Metal,
+                D3D11, GLCore) via GLFW windowing.
               </p>
             </div>
             <div class="roadmap-item">
@@ -248,8 +282,8 @@
               <div class="roadmap-label">Planned</div>
               <h3 class="roadmap-title">Additional Platform Support</h3>
               <p class="roadmap-desc">
-                Expanding beyond macOS to additional platforms after the initial
-                release.
+                Native builds and packaging for Windows and Linux, expanding
+                beyond the primary macOS development environment.
               </p>
             </div>
             <div class="roadmap-item">
