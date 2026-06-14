@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} — {{ site.tagline }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="/corundum_logo.png" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <nav>
+      <div class="nav-inner">
+        <a class="nav-logo" href="/">
+          <img src="/corundum_logo.png" alt="Corundum Engine" />
+          Corundum Engine
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#roadmap">Roadmap</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>
+            <a
+              href="https://github.com/corundumengine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      {{ content }}
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-copy">
+          &copy; 2026 Gentle Lion Studios, Inc. &middot;
+          <a
+            class="footer-link"
+            href="https://github.com/corundumengine"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var menu = document.getElementById("nav-menu");
+        var links = menu.querySelectorAll("a");
+        toggle.addEventListener("click", function () {
+          var expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+          menu.classList.toggle("open");
+        });
+        links.forEach(function (link) {
+          link.addEventListener("click", function () {
+            menu.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

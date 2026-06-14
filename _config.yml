@@ -1,0 +1,6 @@
+title: Corundum Engine
+tagline: A 2D Game Engine Built for CRPGs
+description: A custom 2D game engine written in C++23, designed specifically for building classic role-playing games.
+url: https://corundumengine.com
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
