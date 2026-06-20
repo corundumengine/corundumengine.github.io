@@ -1,18 +1,13 @@
 ---
 layout: default
 ---
+
 <section class="hero" id="hero">
-  <img
-    class="hero-logo"
-    src="corundum_logo.png"
-    alt="Corundum Engine Logo"
-  />
+  <img class="hero-logo" src="corundum_logo.png" alt="Corundum Engine Logo" />
   <h1><span>Corundum</span> Engine</h1>
-  <p class="hero-tagline">
-    A 2D game engine built from the ground up for classic RPGs.
-  </p>
+  <p class="hero-tagline">Forging tools for 2D RPGs</p>
   <div class="hero-cta">
-    <a class="btn btn-primary" href="#features">Explore the Engine</a>
+    <a class="btn btn-primary" href="#features">Explore the Forge</a>
     <a
       class="btn btn-secondary"
       href="https://github.com/corundumengine"
@@ -35,12 +30,11 @@ layout: default
     <p class="section-eyebrow">The Project</p>
     <h2 class="section-title">Built for the love of CRPGs</h2>
     <p class="section-body">
-      Corundum Engine is a custom 2D game engine written in C++23,
-      designed specifically for building classic role-playing games. It
-      uses Sokol for cross-platform hardware-accelerated rendering (Metal
-      on macOS, D3D11 on Windows, GLCore on Linux) and GLFW for windowing.
-      Every part of the engine — from the rendering pipeline to the RPG
-      systems — is a work in progress.
+      Corundum Engine is a custom 2D game engine written in C++23, designed
+      specifically for building classic role-playing games. It uses Sokol for
+      cross-platform hardware-accelerated rendering (Metal on macOS, D3D11 on
+      Windows, GLCore on Linux) and GLFW for windowing. Every part of the engine
+      — from the rendering pipeline to the RPG systems — is a work in progress.
     </p>
     <div class="crystal-divider">
       <svg
@@ -49,7 +43,6 @@ layout: default
         height="28"
         viewBox="0 0 18 28"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <polygon
           points="9,0 17,6 17,22 9,28 1,22 1,6"
@@ -79,110 +72,107 @@ layout: default
       </svg>
     </div>
     <p class="section-body">
-      The goal is a complete environment for developing story-driven 2D
-      RPGs — engine, tools, and game, all built in-house.
+      The goal is a complete forge for developing story-driven 2D RPGs — engine,
+      tools, and game, all built in-house.
     </p>
   </div>
 </section>
 
 <section id="features">
   <div class="container">
-    <p class="section-eyebrow">What's Inside</p>
-    <h2 class="section-title">Engine &amp; Editor Features</h2>
+    <p class="section-eyebrow">The Toolset</p>
+    <h2 class="section-title">Engine & Developer Tools</h2>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">&#128230;</div>
-        <h3 class="feature-title">Texture Atlas Generator</h3>
+        <div class="feature-icon" aria-hidden="true">📦</div>
+        <h3 class="feature-title">Spritepacker</h3>
         <p class="feature-desc">
-          Pack individual sprite images into one or more texture atlas
-          PNGs, ready for use in the engine. Available as the open source
-          Spritepacker CLI tool.
+          CLI tool that packs individual sprite images into texture atlas PNGs
+          and companion JSON metadata — ready for the engine to consume.
         </p>
         <a
           class="btn btn-secondary"
           href="https://github.com/corundumengine/spritepacker"
           target="_blank"
           rel="noopener noreferrer"
-          >View on GitHub &rarr;
+          >Available Now →
         </a>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">&#9881;&#65039;</div>
+        <div class="feature-icon" aria-hidden="true">🌎</div>
+        <h3 class="feature-title">Worldsmith</h3>
+        <p class="feature-desc">
+          World map creation tool with native Azgaar's Fantasy Map Generator
+          import. Paint terrain, place settlements, define states, and export
+          tilemap chunks for the engine.
+        </p>
+        <a
+          class="btn btn-secondary"
+          href="https://github.com/corundumengine/worldsmith"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Available Now →
+        </a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">⚙️</div>
         <h3 class="feature-title">2D Rendering</h3>
         <p class="feature-desc">
-          Hardware-accelerated 2D sprite and tilemap rendering via Sokol,
-          with Metal, D3D11, and GLCore backends for native performance
-          across platforms.
+          Hardware-accelerated 2D sprite and tilemap rendering via Sokol, with
+          Metal, D3D11, and GLCore backends for native performance across
+          platforms.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          &#128506;&#65039;
-        </div>
-        <h3 class="feature-title">World Import</h3>
+        <div class="feature-icon" aria-hidden="true">🖼️</div>
+        <h3 class="feature-title">Spritesmith</h3>
         <p class="feature-desc">
-          Native integration with Azgaar's Fantasy World Generator. Import
-          a world and automatically generate tilemaps — from continent
-          down to regional detail.
+          ImGui-based editor for creating and managing sprite sheets, animation
+          frames, and metadata directly within the engine's toolset.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          &#128444;&#65039;
-        </div>
-        <h3 class="feature-title">Sprite Sheet Editor</h3>
+        <div class="feature-icon" aria-hidden="true">🧱</div>
+        <h3 class="feature-title">Tilesmith</h3>
         <p class="feature-desc">
-          An ImGui-based editor for creating and managing sprite sheets
-          directly within the engine's toolset.
+          Visual tilemap editor for constructing 2D isometric worlds tile by
+          tile — collision shapes, portals, layers, all integrated with the
+          engine's renderer.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">&#129521;</div>
-        <h3 class="feature-title">Tilemap Builder</h3>
-        <p class="feature-desc">
-          Visual tilemap editor for constructing 2D isometric game worlds
-          tile by tile, integrated tightly with the engine's rendering
-          pipeline.
-        </p>
-        <span class="feature-badge">In Development</span>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">&#9876;&#65039;</div>
+        <div class="feature-icon" aria-hidden="true">⚔️</div>
         <h3 class="feature-title">CRPG Systems</h3>
         <p class="feature-desc">
           Rules systems, quest design, dialogue, combat, and character
-          progression mechanics purpose-built for classic role-playing
-          games.
+          progression mechanics purpose-built for classic role-playing games.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">&#128220;</div>
+        <div class="feature-icon" aria-hidden="true">📜</div>
         <h3 class="feature-title">Data-Driven Design</h3>
         <p class="feature-desc">
-          Every aspect of the game — dialogue, tilemaps, sprite sheets,
-          and configuration — is driven by JSON data. No hard-coded
-          content, fully moddable.
+          Every aspect of the game — dialogue, tilemaps, sprite sheets, and
+          configuration — is driven by JSON data. No hard-coded content, fully
+          moddable.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">&#128172;</div>
+        <div class="feature-icon" aria-hidden="true">💬</div>
         <h3 class="feature-title">Dialogue Engine</h3>
         <p class="feature-desc">
-          A directed-graph dialogue system supporting branching
-          conversations, quest triggers, and deep RPG storytelling
-          mechanics.
+          A directed-graph dialogue system supporting branching conversations,
+          quest triggers, and deep RPG storytelling mechanics.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          &#128396;&#65039;
-        </div>
+        <div class="feature-icon" aria-hidden="true">🖌️</div>
         <h3 class="feature-title">Font Rendering</h3>
         <p class="feature-desc">
           TrueType font rendering via FreeType, with support for UI text,
@@ -203,47 +193,53 @@ layout: default
         <div class="roadmap-label">Complete</div>
         <h3 class="roadmap-title">Spritepacker CLI</h3>
         <p class="roadmap-desc">
-          Open source texture atlas CLI tool, available now on GitHub.
+          Open source texture atlas tool. Available now on GitHub.
+        </p>
+      </div>
+      <div class="roadmap-item done">
+        <div class="roadmap-label">In Development</div>
+        <h3 class="roadmap-title">Worldsmith</h3>
+        <p class="roadmap-desc">
+          Map creation tool with Azgaar's import, terrain painting, settlement
+          placement, and tilemap chunk export.
         </p>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">Core Engine &amp; Rendering</h3>
+        <h3 class="roadmap-title">Core Engine & Rendering</h3>
         <p class="roadmap-desc">
-          Sokol-based 2D renderer with cross-platform backends (Metal,
-          D3D11, GLCore) via GLFW windowing.
+          Sokol-based 2D renderer with cross-platform backends (Metal, D3D11,
+          GLCore) via GLFW windowing.
         </p>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">Developer Toolset</h3>
+        <h3 class="roadmap-title">The Forge — Developer Tools</h3>
         <p class="roadmap-desc">
-          ImGui-based sprite sheet editor, tilemap builder, texture atlas
-          generator, and Azgaar's world importer.
+          ImGui-based Spritesmith, Tilesmith, and Worldsmith — a complete asset
+          pipeline for 2D RPG production.
         </p>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">CRPG Rules &amp; Quest Systems</h3>
+        <h3 class="roadmap-title">CRPG Rules & Quest Systems</h3>
         <p class="roadmap-desc">
-          Character stats, combat mechanics, dialogue trees, and quest
-          tracking purpose-built for classic RPGs.
+          Character stats, combat mechanics, dialogue trees, and quest tracking
+          purpose-built for classic RPGs.
         </p>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-label">Planned</div>
         <h3 class="roadmap-title">Additional Platform Support</h3>
         <p class="roadmap-desc">
-          Native builds and packaging for Windows and Linux, expanding
-          beyond the primary macOS development environment.
+          Native builds and packaging for Windows and Linux, expanding beyond
+          the primary macOS development environment.
         </p>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-label">Planned</div>
         <h3 class="roadmap-title">The Game</h3>
-        <p class="roadmap-desc">
-          A 2D CRPG built entirely on Corundum Engine.
-        </p>
+        <p class="roadmap-desc">A 2D CRPG built entirely on Corundum Engine.</p>
       </div>
     </div>
   </div>
@@ -257,7 +253,6 @@ layout: default
       height="28"
       viewBox="0 0 18 28"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <polygon
         points="9,0 17,6 17,22 9,28 1,22 1,6"
