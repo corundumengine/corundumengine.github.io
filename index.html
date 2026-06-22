@@ -5,7 +5,7 @@ layout: default
 <section class="hero" id="hero">
   <img class="hero-logo" src="corundum_logo.png" alt="Corundum Engine Logo" />
   <h1><span>Corundum</span> Engine</h1>
-  <p class="hero-tagline">Forging tools for 2D CRPGs</p>
+  <p class="hero-tagline">Forging a 2D CRPG engine from scratch</p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="#features">Explore the Forge</a>
     <a
@@ -30,10 +30,9 @@ layout: default
     <p class="section-eyebrow">The Project</p>
     <h2 class="section-title">Built for the love of CRPGs</h2>
     <p class="section-body">
-      Corundum Engine is a custom 2D game engine written in C++23, designed
-      specifically for building classic role-playing games. It uses Sokol for
-      cross-platform hardware-accelerated rendering (Metal on macOS, D3D11 on
-      Windows, GLCore on Linux) and GLFW for windowing.
+      Corundum Engine is a 2D CRPG engine being built from scratch in C++23,
+      developed on Apple Silicon — in a genre that rarely is. It's early days,
+      but the ambition is a complete forge: engine, tools, and game.
     </p>
     <div class="crystal-divider">
       <svg
@@ -71,16 +70,15 @@ layout: default
       </svg>
     </div>
     <p class="section-body">
-      The goal is a complete forge for developing story-driven 2D CRPGs —
-      engine, tools, and game, all built in-house.
+      The dev log tracks progress as the engine, tools, and design take shape.
     </p>
   </div>
 </section>
 
 <section id="features">
   <div class="container">
-    <p class="section-eyebrow">The Toolset</p>
-    <h2 class="section-title">Engine & Developer Tools</h2>
+    <p class="section-eyebrow">The Vision</p>
+    <h2 class="section-title">What's Being Built</h2>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon" aria-hidden="true">📦</div>
@@ -89,7 +87,7 @@ layout: default
           CLI tool that packs individual sprite images into texture atlas PNGs
           and companion JSON metadata — ready for the engine to consume.
         </p>
-        <span class="feature-badge">Complete</span>
+        <span class="feature-badge feature-badge-complete">Complete</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon" aria-hidden="true">🌎</div>
@@ -108,16 +106,6 @@ layout: default
           Node-graph dialogue editor for branching conversations. Supports Talk,
           Choice, and Event nodes with conditions, variable mutations,
           sequencing, and event hooks. Quest editing planned.
-        </p>
-        <span class="feature-badge">In Development</span>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">⚙️</div>
-        <h3 class="feature-title">2D Rendering</h3>
-        <p class="feature-desc">
-          Hardware-accelerated 2D sprite and tilemap rendering via Sokol, with
-          Metal, D3D11, and GLCore backends for native performance across
-          platforms.
         </p>
         <span class="feature-badge">In Development</span>
       </div>
@@ -141,6 +129,16 @@ layout: default
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
+        <div class="feature-icon" aria-hidden="true">⚙️</div>
+        <h3 class="feature-title">2D Rendering</h3>
+        <p class="feature-desc">
+          Hardware-accelerated 2D sprite and tilemap rendering via Sokol, with
+          Metal, D3D11, and GLCore backends — targeting macOS, Windows, and
+          Linux via GLFW.
+        </p>
+        <span class="feature-badge">In Development</span>
+      </div>
+      <div class="feature-card">
         <div class="feature-icon" aria-hidden="true">⚔️</div>
         <h3 class="feature-title">CRPG Systems</h3>
         <p class="feature-desc">
@@ -160,84 +158,14 @@ layout: default
         <span class="feature-badge">In Development</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🖌️</div>
-        <h3 class="feature-title">Font Rendering</h3>
+        <div class="feature-icon" aria-hidden="true">🏰</div>
+        <h3 class="feature-title">Project Keystone</h3>
         <p class="feature-desc">
-          TrueType font rendering via FreeType, with support for UI text,
-          in-game dialogue panels, and stylistic RPG typography.
+          A 2D CRPG built entirely on Corundum Engine — the game the whole forge
+          exists to ship. Story, world, and systems taking shape alongside the
+          engine.
         </p>
-        <span class="feature-badge">In Development</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="roadmap">
-  <div class="container">
-    <p class="section-eyebrow">What's Next</p>
-    <h2 class="section-title">Roadmap</h2>
-    <div class="roadmap-list">
-      <div class="roadmap-item done">
-        <div class="roadmap-label">Complete</div>
-        <h3 class="roadmap-title">Spritepacker CLI</h3>
-        <p class="roadmap-desc">
-          Open source texture atlas tool. Available now on GitHub.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">Worldsmith</h3>
-        <p class="roadmap-desc">
-          Map creation tool with Azgaar's import, terrain painting, settlement
-          placement, and tilemap chunk export.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">Core Engine & Rendering</h3>
-        <p class="roadmap-desc">
-          Sokol-based 2D renderer with cross-platform backends (Metal, D3D11,
-          GLCore) via GLFW windowing.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">The Forge — Developer Tools</h3>
-        <p class="roadmap-desc">
-          ImGui-based Spritesmith, Tilesmith, and Talesmith — visual editors for
-          authoring the sprite sheets, tilemaps, and dialogue trees that drive
-          the engine.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">Talesmith — Dialogue & Quest Editor</h3>
-        <p class="roadmap-desc">
-          Visual node-graph editor for authoring dialogue trees. Quest editing —
-          objectives, stages, rewards, and prerequisite chains — is planned for
-          a future release.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">In Progress</div>
-        <h3 class="roadmap-title">CRPG Rules & Quest Systems</h3>
-        <p class="roadmap-desc">
-          Character stats, combat mechanics, dialogue trees, and quest tracking
-          purpose-built for classic CRPGs.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">Planned</div>
-        <h3 class="roadmap-title">Additional Platform Support</h3>
-        <p class="roadmap-desc">
-          Native builds and packaging for Windows and Linux, expanding beyond
-          the primary macOS development environment.
-        </p>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-label">Planned</div>
-        <h3 class="roadmap-title">The Game</h3>
-        <p class="roadmap-desc">A 2D CRPG built entirely on Corundum Engine.</p>
+        <span class="feature-badge feature-badge-planned">Planned</span>
       </div>
     </div>
   </div>

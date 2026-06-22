@@ -320,12 +320,39 @@ section {
 }
 
 /* ── Features ── */
+.features-group + .features-group {
+  margin-top: 3.5rem;
+}
+.features-group-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.features-group-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--steel-border);
+}
+.features-group-name {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1px;
-  margin-top: 3rem;
+  margin-top: 0;
   background: var(--steel-border);
+}
+.features-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
 }
 .feature-card {
   background: var(--steel-deep);
@@ -380,6 +407,14 @@ section {
   border: 1px solid var(--ruby-dim);
   padding: 0.15rem 0.5rem;
   text-transform: uppercase;
+}
+.feature-badge-complete {
+  color: #5aab78;
+  border-color: #2a5c3d;
+}
+.feature-badge-planned {
+  color: #7a9abf;
+  border-color: #2e4468;
 }
 
 .feature-card .btn {
@@ -510,7 +545,8 @@ footer {
     padding: 0.85rem 0;
     font-size: 0.72rem;
   }
-  .features-grid {
+  .features-grid,
+  .features-grid-2col {
     grid-template-columns: 1fr;
   }
   .hero-logo {
