@@ -14,7 +14,7 @@ Corundum Engine is my attempt to build something in that tradition. A 2D isometr
 
 If the goal was just to ship a game, the right call would have been to use an existing engine. But I wanted to craft something of my own, and that meant making my own architectural decisions.
 
-I started with SFML and SDL for rendering. They worked, but at some point I decided if I was going to build this, I should go all in. That's when I switched to GLFW and Metal.
+I started with SFML for rendering, then tried SDL. They worked, but at some point I decided if I was going to build this, I should go all in. That's when I switched to GLFW and Metal.
 
 Another decision was data-oriented design. I'd watched several talks on it and the performance benefits were hard to ignore. Object-oriented code can get complicated fast, with things hiding inside other things. Data-oriented design keeps it flat and straightforward.
 
