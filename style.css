@@ -698,6 +698,13 @@ footer {
   border-top: 1px solid var(--steel-border);
   margin: 2.5rem 0;
 }
+.post-author {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-top: 0.4rem;
+}
 .post-back {
   text-align: center;
   margin-top: 3rem;
