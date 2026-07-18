@@ -3,15 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} — {{ site.tagline }}</title>
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description }}{% endif %}" />
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} — {{
+      site.tagline }}
+    </title>
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}"
+    />
+    <meta
+      property="og:description"
+      content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description }}{% endif %}"
+    />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:image" content="{{ site.url }}/corundum_logo.png" />
-    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+    <meta
+      property="og:type"
+      content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
+    />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
-    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description }}{% endif %}" />
+    <meta
+      name="twitter:title"
+      content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}"
+    />
+    <meta
+      name="twitter:description"
+      content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description }}{% endif %}"
+    />
     <meta name="twitter:image" content="{{ site.url }}/corundum_logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +60,6 @@
         </button>
         <ul class="nav-links" id="nav-menu">
           <li><a href="/#about">About</a></li>
-          <li><a href="/#features">Features</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li>
             <a
@@ -57,9 +74,7 @@
       </div>
     </nav>
 
-    <main id="main-content">
-      {{ content }}
-    </main>
+    <main id="main-content">{{ content }}</main>
 
     <footer>
       <div class="footer-inner">

@@ -7,16 +7,16 @@
 }
 
 :root {
-  --void: #0d1117;
+  --void: #140a0b;
   --steel-deep: #1c2b3f;
   --steel-mid: #243550;
   --steel-border: #2e4468;
   --steel-light: #4a5e7a;
-  --ruby: #8b2d3a;
-  --ruby-bright: #d4606e;
+  --ruby: #ad384c;
+  --ruby-bright: #e2687c;
   --ruby-dim: #5c1e27;
-  --text-primary: #e8edf4;
-  --text-muted: #92a0b9;
+  --text-primary: #f3eeee;
+  --text-muted: #b79aa0;
   --font-display: "Cinzel", serif;
   --font-body: "Crimson Pro", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -27,7 +27,19 @@ html {
 }
 
 body {
-  background: var(--void);
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 50% 0%,
+      rgba(173, 56, 76, 0.28) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 85% 100%,
+      rgba(173, 56, 76, 0.16) 0%,
+      transparent 60%
+    ),
+    var(--void);
+  background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 1.25rem;
@@ -99,7 +111,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(13, 17, 23, 0.92);
+  background: rgba(20, 10, 11, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--steel-border);
 }
@@ -193,13 +205,13 @@ nav {
   inset: 0;
   background:
     radial-gradient(
-      ellipse 55% 45% at 50% 35%,
-      rgba(46, 68, 104, 0.35) 0%,
+      ellipse 55% 45% at 50% 32%,
+      rgba(173, 56, 76, 0.22) 0%,
       transparent 65%
     ),
     radial-gradient(
-      ellipse 35% 50% at 70% 70%,
-      rgba(139, 45, 58, 0.1) 0%,
+      ellipse 40% 55% at 75% 75%,
+      rgba(46, 68, 104, 0.16) 0%,
       transparent 55%
     );
   pointer-events: none;
@@ -319,6 +331,10 @@ section {
 .section-body a:hover {
   color: var(--ruby);
 }
+.section-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
 .section-body {
   color: var(--text-muted);
   max-width: 620px;
@@ -327,161 +343,6 @@ section {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* ── Features ── */
-.features-group + .features-group {
-  margin-top: 3.5rem;
-}
-.features-group-header {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-.features-group-header::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--steel-border);
-}
-.features-group-name {
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1px;
-  margin-top: 0;
-  background: var(--steel-border);
-}
-.features-grid-2col {
-  grid-template-columns: repeat(2, 1fr);
-}
-.feature-card {
-  background: var(--steel-deep);
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.25s;
-}
-.feature-card:hover {
-  background: var(--steel-mid);
-}
-.feature-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--ruby);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s;
-}
-.feature-card:hover::after {
-  transform: scaleX(1);
-}
-.feature-icon {
-  font-size: 1.4rem;
-  margin-bottom: 0.9rem;
-}
-.feature-title {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  margin-bottom: 0.6rem;
-}
-.feature-desc {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.65;
-}
-.feature-badge {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  color: var(--ruby-bright);
-  border: 1px solid var(--ruby-dim);
-  padding: 0.15rem 0.5rem;
-  text-transform: uppercase;
-}
-.feature-badge-complete {
-  color: #5aab78;
-  border-color: #2a5c3d;
-}
-.feature-badge-planned {
-  color: #7a9abf;
-  border-color: #2e4468;
-}
-
-.feature-card .btn {
-  margin-top: 1rem;
-  font-size: 0.6rem;
-}
-
-/* ── Roadmap ── */
-.roadmap-list {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid var(--steel-border);
-  padding-left: 2rem;
-}
-.roadmap-item {
-  position: relative;
-  padding-bottom: 2.25rem;
-}
-.roadmap-item::before {
-  content: "";
-  position: absolute;
-  left: -2.12rem;
-  top: 0.5rem;
-  width: 8px;
-  height: 8px;
-  background: var(--void);
-  border: 1px solid var(--steel-light);
-  transform: rotate(45deg) translateX(-3px);
-}
-.roadmap-item.done::before {
-  background: var(--ruby);
-  border-color: var(--ruby);
-}
-.roadmap-label {
-  font-family: var(--font-display);
-  font-size: 0.58rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 0.2rem;
-}
-.roadmap-item.done .roadmap-label {
-  color: var(--ruby);
-}
-.roadmap-title {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.03em;
-}
-.roadmap-desc {
-  font-size: 0.98rem;
-  color: var(--text-muted);
-  line-height: 1.6;
 }
 
 /* ── Footer ── */
@@ -535,7 +396,7 @@ footer {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(13, 17, 23, 0.96);
+    background: rgba(20, 10, 11, 0.94);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--steel-border);
     padding: 0.5rem 2rem 1rem;
@@ -554,10 +415,6 @@ footer {
     display: block;
     padding: 0.85rem 0;
     font-size: 0.72rem;
-  }
-  .features-grid,
-  .features-grid-2col {
-    grid-template-columns: 1fr;
   }
   .hero-logo {
     width: 210px;
