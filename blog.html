@@ -8,7 +8,8 @@ title: Blog
     <h2 class="section-title">Dev Log</h2>
     <p class="section-body">Notes from the forge.</p>
     <div class="blog-list">
-      {% for post in site.posts %}
+      {% for post in site.posts %} {% unless forloop.first %} {% include
+      facet-divider.html %} {% endunless %}
       <div class="blog-preview">
         <p class="blog-preview-date">{{ post.date | date: "%B %d, %Y" }}</p>
         <h3 class="blog-preview-title">

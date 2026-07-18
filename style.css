@@ -42,7 +42,7 @@ body {
   background-attachment: fixed;
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -252,7 +252,7 @@ nav {
 /* ── Buttons ── */
 .btn {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
@@ -293,7 +293,7 @@ nav {
 }
 .badge {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: #7d92ab;
   border: 1px solid var(--steel-border);
   padding: 0.25rem 0.65rem;
@@ -338,11 +338,36 @@ section {
 .section-body {
   color: var(--text-muted);
   max-width: 620px;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.8;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+  max-width: 620px;
+  margin: 1.75rem auto 0;
+  list-style: none;
+}
+.tool-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+}
+.tool-desc {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--steel-light);
+  margin-top: 0.2rem;
 }
 
 /* ── Footer ── */
@@ -355,21 +380,8 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-.footer-logo {
-  width: 37.5px;
-  height: 37.5px;
-  border-radius: 50%;
-  margin-bottom: 0.25rem;
-  opacity: 0.8;
-}
-.footer-name {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--text-primary);
-  letter-spacing: 0.1em;
-}
 .footer-copy {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 .footer-link {
@@ -414,7 +426,6 @@ footer {
   .nav-links a {
     display: block;
     padding: 0.85rem 0;
-    font-size: 0.72rem;
   }
   .hero-logo {
     width: 210px;
@@ -428,23 +439,19 @@ footer {
   flex-direction: column;
   gap: 2.5rem;
 }
-.blog-preview {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--steel-border);
-}
-.blog-preview:last-child {
-  border-bottom: none;
+.blog-list .crystal-divider {
+  margin: 0;
 }
 .blog-preview-date {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   color: var(--ruby-bright);
   letter-spacing: 0.1em;
   margin-bottom: 0.4rem;
 }
 .blog-preview-title {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -458,12 +465,12 @@ footer {
 }
 .blog-preview-excerpt {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 .blog-preview-readmore {
   font-family: var(--font-display);
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--steel-light);
@@ -486,7 +493,7 @@ footer {
 }
 .post-date {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--ruby-bright);
   letter-spacing: 0.12em;
   margin-bottom: 0.6rem;
@@ -503,7 +510,7 @@ footer {
   max-width: 680px;
   margin: 0 auto;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.85;
 }
 .post-body h2 {
@@ -567,18 +574,17 @@ footer {
 }
 .post-author {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   letter-spacing: 0.08em;
   margin-top: 0.4rem;
 }
 .post-back {
   text-align: center;
-  margin-top: 3rem;
 }
 .post-back a {
   font-family: var(--font-display);
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--steel-light);
