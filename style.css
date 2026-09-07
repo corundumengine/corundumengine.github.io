@@ -231,6 +231,7 @@ nav {
 .hero-logo {
   width: min(560px, 72vw, 58vh);
   height: auto;
+  aspect-ratio: 1 / 1;
   margin: 0 auto 2.25rem;
   filter: drop-shadow(0 0 32px rgba(139, 45, 58, 0.25));
 }
