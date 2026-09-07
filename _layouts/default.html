@@ -16,7 +16,7 @@
       content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description }}{% endif %}"
     />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:image" content="{{ site.url }}/corundum_logo.png" />
+    <meta property="og:image" content="{{ site.url }}/logo.png" />
     <meta
       property="og:type"
       content="{% if page.layout == 'post' %}article{% else %}website{% endif %}"
@@ -30,14 +30,14 @@
       name="twitter:description"
       content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 30 }}{% else %}{{ site.description }}{% endif %}"
     />
-    <meta name="twitter:image" content="{{ site.url }}/corundum_logo.png" />
+    <meta name="twitter:image" content="{{ site.url }}/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="/corundum_logo.png" />
+    <link rel="preload" as="image" href="/logo.png" />
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
@@ -45,7 +45,7 @@
     <nav>
       <div class="nav-inner">
         <a class="nav-logo" href="/">
-          <img src="/corundum_logo.png" alt="Corundum Engine" />
+          <img src="/logomark.png" alt="Corundum Engine" />
           Corundum Engine
         </a>
         <button
