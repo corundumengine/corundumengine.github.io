@@ -346,13 +346,37 @@ section {
   margin-right: auto;
 }
 .tool-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.75rem;
-  max-width: 620px;
-  margin: 1.75rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 540px;
+  margin: 2.25rem auto 0;
   list-style: none;
+}
+.tool-list li {
+  position: relative;
+  padding: 1.75rem 1.25rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--steel-border);
+  background: rgba(36, 53, 80, 0.18);
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.tool-list li::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background: var(--ruby);
+  border: 1px solid var(--steel-border);
+  transform: translateX(-50%) rotate(45deg);
+}
+.tool-list li:hover {
+  border-color: var(--ruby-dim);
+  background: rgba(92, 30, 39, 0.22);
 }
 .tool-name {
   display: block;
@@ -367,8 +391,8 @@ section {
   font-size: 0.75rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--steel-light);
-  margin-top: 0.2rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
 }
 
 /* ── Footer ── */
@@ -427,6 +451,9 @@ footer {
   .nav-links a {
     display: block;
     padding: 0.85rem 0;
+  }
+  .tool-list {
+    grid-template-columns: 1fr;
   }
 }
 /* ── Blog ── */
