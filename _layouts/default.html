@@ -39,6 +39,30 @@
     />
     {% if page.url == "/" %}<link rel="preload" as="image" href="/logo.png" />{% endif %}
     <link rel="stylesheet" href="/style.css" />
+    <noscript>
+      <style>
+        @media (max-width: 600px) {
+          .nav-inner {
+            height: auto;
+            flex-wrap: wrap;
+          }
+          .nav-toggle {
+            display: none;
+          }
+          .nav-links {
+            display: flex;
+            position: static;
+            flex-direction: column;
+            width: 100%;
+            background: none;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            border-bottom: none;
+            padding: 0.5rem 0 1rem;
+          }
+        }
+      </style>
+    </noscript>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
