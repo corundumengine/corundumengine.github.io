@@ -5,9 +5,7 @@ layout: default
 <section class="hero" id="hero">
   <img class="hero-logo" src="/logo.png" alt="" />
   <h1 class="sr-only">Corundum Engine</h1>
-  <p class="hero-tagline">
-    A bespoke 2D isometric CRPG engine — forged to ship games
-  </p>
+  <p class="hero-tagline">A 2D isometric CRPG engine</p>
   <div class="hero-cta">
     <a class="btn btn-primary" href="/blog/">Read the Devlog</a>
     <a
@@ -20,10 +18,10 @@ layout: default
   </div>
   <div class="hero-stack">
     <span class="badge">C++23</span>
-    <span class="badge">Sokol</span>
-    <span class="badge">GLFW</span>
-    <span class="badge">Dear ImGui</span>
     <span class="badge">Apple Silicon</span>
+    <span class="badge">GLFW</span>
+    <span class="badge">Sokol</span>
+    <span class="badge">Dear ImGui</span>
   </div>
 </section>
 
@@ -32,15 +30,14 @@ layout: default
     <p class="section-eyebrow">The Project</p>
     <h2 class="section-title">Built for the love of CRPGs</h2>
     <p class="section-body">
-      Corundum is a bespoke engine, built from scratch in C++23 to ship its
-      first game: <strong>Project Keystone</strong> (codename), a 2D isometric
-      fantasy CRPG. Engine, tools, and game grow together.
+      I've been playing games for a long time, starting with Bard's Tale and
+      Ultima III on an Apple IIe, and I'm still playing today. I have ideas
+      about what I like in a role-playing game, and I want to build my own, but
+      not on someone else's engine. That's how Corundum started. I'm building it
+      on macOS, but it will eventually run on Windows and Linux too.
     </p>
-    <p class="section-body">
-      Isometric tilemaps, entity/component gameplay, branching dialogue, and
-      staged quests form the engine today. Four in-house tools author the JSON
-      that drives it all.
-    </p>
+    <p class="section-eyebrow tools-eyebrow">The Tools</p>
+    <h2 class="section-title">One does not simply hand-edit JSON</h2>
     <ul class="tool-list">
       <li>
         <span class="tool-name">Tilesmith</span
@@ -61,8 +58,12 @@ layout: default
     </ul>
     {% include facet-divider.html %}
     <p class="section-body">
-      <a href="/blog/">Follow along</a> as the engine, tools, and game take
-      shape.
+      If any of that sounds like your kind of thing,
+      <a href="/blog/">follow along on the devlog</a>. There's a lot more to
+      come.
+    </p>
+    <p class="section-note">
+      Roll for initiative; the build system already did.
     </p>
   </div>
 </section>

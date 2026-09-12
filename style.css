@@ -124,6 +124,7 @@ nav {
   right: 0;
   z-index: 100;
   background: rgba(20, 10, 11, 0.88);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--steel-border);
 }
@@ -249,6 +250,10 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
 }
+.hero-cta .btn {
+  min-width: 12rem;
+  text-align: center;
+}
 
 /* ── Buttons ── */
 .btn {
@@ -307,17 +312,22 @@ section {
 }
 .section-eyebrow {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--ruby);
   margin-bottom: 0.6rem;
   text-align: center;
 }
+.tools-eyebrow {
+  margin-top: 2.75rem;
+}
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2.1rem);
-  font-weight: 600;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-weight: 400;
+  font-style: italic;
   color: var(--text-primary);
   letter-spacing: 0.03em;
   margin-bottom: 1.25rem;
@@ -350,7 +360,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   max-width: 540px;
-  margin: 2.25rem auto 0;
+  margin: 1rem auto 0;
   list-style: none;
 }
 .tool-list li {
@@ -394,6 +404,13 @@ section {
   color: var(--text-muted);
   margin-top: 0.3rem;
 }
+.section-note {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+}
 
 /* ── Footer ── */
 footer {
@@ -434,6 +451,7 @@ footer {
     right: 0;
     flex-direction: column;
     background: rgba(20, 10, 11, 0.94);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--steel-border);
     padding: 0.5rem 2rem 1rem;
@@ -454,6 +472,17 @@ footer {
   }
   .tool-list {
     grid-template-columns: 1fr;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta .btn {
+    min-width: 0;
+    width: 100%;
   }
 }
 /* ── Blog ── */
@@ -628,6 +657,9 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   * {
     transition: none !important;
   }
