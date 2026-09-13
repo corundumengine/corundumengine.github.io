@@ -155,12 +155,20 @@ nav {
 }
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 2rem;
   list-style: none;
 }
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-display);
   font-size: 0.9rem;
+  line-height: 1;
   letter-spacing: 0.14em;
   color: #a0b5cc;
   text-decoration: none;
@@ -169,6 +177,12 @@ nav {
 }
 .nav-links a:hover {
   color: var(--text-primary);
+}
+.nav-links .nav-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 .nav-toggle {
   display: none;
@@ -457,11 +471,13 @@ footer {
     border-bottom: 1px solid var(--steel-border);
     padding: 0.5rem 2rem 1rem;
     gap: 0;
+    align-items: stretch;
   }
   .nav-links.open {
     display: flex;
   }
   .nav-links li {
+    display: block;
     border-bottom: 1px solid var(--steel-border);
   }
   .nav-links li:last-child {
@@ -486,6 +502,13 @@ footer {
     width: 100%;
   }
 }
+
+@media (min-width: 601px) {
+  .nav-links a:not(.nav-icon) {
+    padding-top: 0.15em; /* compensate for Cinzel's oversized descent metric */
+  }
+}
+
 /* ── Blog ── */
 .blog-list {
   margin-top: 3rem;
