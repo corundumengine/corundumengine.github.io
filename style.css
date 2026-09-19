@@ -456,8 +456,9 @@ section {
 }
 .section-note {
   text-align: center;
-  font-size: 1.15rem;
-  color: var(--text-muted);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #927b80;
   margin-top: 1.5rem;
 }
 
