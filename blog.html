@@ -5,8 +5,10 @@ title: Blog
 
 <section class="post">
   <div class="container">
-    <h1 class="post-title">Dev Log</h1>
-    <p class="section-body">Notes from the forge.</p>
+    <header class="post-header">
+      <h1 class="post-title">Dev Log</h1>
+      <p class="section-body">Notes from the forge.</p>
+    </header>
     <div class="blog-list">
       {% for post in site.posts %} {% unless forloop.first %} {% include
       facet-divider.html %} {% endunless %}
@@ -19,7 +21,8 @@ title: Blog
           {{ post.excerpt | strip_html | truncatewords: 60 }}
         </p>
         <a class="blog-preview-readmore" href="{{ post.url }}"
-          >Read more &rarr;</a
+          >Read more<span class="sr-only"> about {{ post.title }}</span>
+          &rarr;</a
         >
       </div>
       {% endfor %} {% if site.posts.size == 0 %}

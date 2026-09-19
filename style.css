@@ -6,20 +6,56 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/assets/fonts/CormorantSC-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/assets/fonts/CormorantSC-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant SC";
+  src: url("/assets/fonts/CormorantSC-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Marcellus";
+  src: url("/assets/fonts/Marcellus-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/assets/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --void: #140a0b;
   --steel-deep: #1c2b3f;
   --steel-mid: #243550;
   --steel-border: #2e4468;
-  --steel-light: #4a5e7a;
+  --steel-light: #7a93b8;
   --ruby: #ad384c;
   --ruby-bright: #e2687c;
   --ruby-dim: #5c1e27;
   --text-primary: #f3eeee;
   --text-muted: #b79aa0;
-  --font-display: "Alegreya", serif;
-  --font-body: "Alegreya", Georgia, serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Cormorant SC", serif;
+  --font-body: "Marcellus", Georgia, serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 html {
@@ -108,7 +144,7 @@ body {
   padding: 0.6rem 1.25rem;
   background: var(--ruby);
   color: #fff;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -140,8 +176,8 @@ nav {
 }
 .nav-logo {
   font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: var(--text-primary);
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -167,11 +203,11 @@ nav {
 .nav-links a {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1;
   letter-spacing: 0.14em;
-  color: #a0b5cc;
+  color: #bdd0e3;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s;
@@ -255,7 +291,6 @@ nav {
 .hero-tagline {
   font-size: 1.2rem;
   color: var(--text-muted);
-  font-style: italic;
   max-width: 460px;
   margin: 0 auto 2.5rem;
   line-height: 1.6;
@@ -273,7 +308,7 @@ nav {
 
 /* ── Buttons ── */
 .btn {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.85rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -341,9 +376,8 @@ section {
 }
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
   font-weight: 400;
-  font-style: italic;
   color: var(--text-primary);
   letter-spacing: 0.03em;
   margin-bottom: 1.25rem;
@@ -406,7 +440,7 @@ section {
 }
 .tool-name {
   display: block;
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.9rem;
   letter-spacing: 0.06em;
   color: var(--text-primary);
@@ -422,7 +456,6 @@ section {
 }
 .section-note {
   text-align: center;
-  font-style: italic;
   font-size: 1.15rem;
   color: var(--text-muted);
   margin-top: 1.5rem;
@@ -504,12 +537,6 @@ footer {
   }
 }
 
-@media (min-width: 601px) {
-  .nav-links a:not(.nav-icon) {
-    padding-top: 0.15em; /* compensate for Cinzel's oversized descent metric */
-  }
-}
-
 /* ── Blog ── */
 .blog-list {
   margin-top: 3rem;
@@ -547,7 +574,7 @@ footer {
   line-height: 1.7;
 }
 .blog-preview-readmore {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -661,7 +688,7 @@ footer {
   text-align: center;
 }
 .post-back a {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -677,7 +704,6 @@ footer {
 .blog-empty {
   text-align: center;
   color: var(--text-muted);
-  font-style: italic;
   margin-top: 2rem;
 }
 
