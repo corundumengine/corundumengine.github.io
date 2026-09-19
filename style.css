@@ -17,8 +17,8 @@
   --ruby-dim: #5c1e27;
   --text-primary: #f3eeee;
   --text-muted: #b79aa0;
-  --font-display: "Cinzel", serif;
-  --font-body: "Crimson Pro", Georgia, serif;
+  --font-display: "Alegreya", serif;
+  --font-body: "Alegreya", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
 }
 
@@ -44,6 +44,7 @@ body {
   font-family: var(--font-body);
   font-size: 1.4rem;
   line-height: 1.7;
+  font-variant-numeric: lining-nums;
   -webkit-font-smoothing: antialiased;
 }
 
